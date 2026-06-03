@@ -36,6 +36,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
    ```
    2. Exit with:
    ```bash
+   all this because of next version?
    exit
    ```
    3. start the container - type in terminal:
