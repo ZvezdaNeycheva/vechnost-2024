@@ -26,7 +26,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   -v $(pwd):/app \
   -w /app \
   -u $(id -u):$(id -g) \
-  node:18 sh
+  node:20-slim sh
    ```
    1. Inside the container:
    ```bash

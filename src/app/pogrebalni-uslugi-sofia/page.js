@@ -1,6 +1,6 @@
 
 export const metadata = {
-  title: "Погребални услуги София | Организация на погребения Вечност",
+  title: "Погребални услуги София",
   description:
     "Пълна организация на погребения в София и Орландовци. Денонощни траурни услуги, дежурен съдебен лекар и цени от 750 EUR.",
 }
@@ -8,8 +8,26 @@ export const metadata = {
 import Link from "next/link";
 
 export default function PogrebalniUslugiSofiaPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Погребални услуги София",
+    provider: {
+      "@type": "FuneralHome",
+      name: "Траурна агенция Вечност",
+    },
+    areaServed: "Sofia, Bulgaria",
+  };
   return (
     <main className="bg-white">
+
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
 
       {/* HERO / H1 */}
       <section className="mx-auto max-w-6xl px-4 py-10 sm:py-16">
@@ -84,11 +102,11 @@ export default function PogrebalniUslugiSofiaPage() {
         <div className="mx-auto max-w-6xl px-4 py-10">
 
           <h2 className="text-xl font-semibold text-gray-900 sm:text-2xl">
-            Поргебение на домашни любимци
+            Погребение на домашни любимци
           </h2>
 
           <p className="mt-4 text-sm text-gray-600">
-            Предлагаме и поргебение на домашни любимци.
+            Предлагаме и погребение на домашни любимци.
           </p>
 
         </div>
